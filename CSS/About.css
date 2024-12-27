@@ -1,0 +1,255 @@
+/* Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #444;
+    line-height: 1.6;
+    padding-top: 80px; /* Account for fixed header */
+    min-height: 100vh; /* Ensure body covers the full viewport */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Section */
+header {
+    background-color: rgb(12, 106, 143);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo-img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.navbar .logo h2 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Unified Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    background-color: orange;
+    border-radius: 5px;
+}
+
+/* Mobile Navigation (Hamburger) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+}
+
+/* Collapsible Menu for Mobile */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(12, 106, 143);
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.mobile-menu a {
+    padding: 12px;
+    color: white;
+    font-size: 20px;
+    display: block;
+    transition: 0.3s;
+}
+
+.mobile-menu a:hover {
+    background-color: orange;
+    border-radius: 5px;
+}
+
+/* Main Content Styling */
+.main-content {
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.main-content h2 {
+    font-size: 36px;
+    color: #001f3d;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* CEO Profile Section */
+.ceo-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.ceo-profile img {
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 40px;
+    border: 4px solid black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.ceo-profile .ceo-info {
+    max-width: 700px;
+}
+
+.ceo-profile .ceo-info h3 {
+    font-size: 32px;
+    color: #001f3d;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.ceo-profile .ceo-info p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Mission and Vision Section */
+.mission-vision {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.mission-vision h3 {
+    font-size: 28px;
+    color: #001f3d;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.mission-vision p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    max-width: 550px;
+}
+
+.mission-vision .mission, .mission-vision .vision {
+    width: 48%;
+    margin-bottom: 30px;
+}
+
+/* Footer Section */
+footer {
+    background-color: rgb(12, 106, 143);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .hamburger div {
+        background-color: #fff;
+    }
+
+    .main-content {
+        margin-top: 60px;
+    }
+
+    .ceo-profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ceo-profile img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .mission-vision {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission-vision .mission, .mission-vision .vision {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

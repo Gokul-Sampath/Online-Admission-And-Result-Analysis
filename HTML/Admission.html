@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <link rel="stylesheet" href="../CSS/Admission.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../image/logo.png" alt="Logo" class="logo-img"> <!-- Add logo here -->
+                <h2>GSTech</h2>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../HTML/OAS_Project.html">Home</a></li>
+                <li><a href="../HTML/About.html">About</a></li>
+                <li><a href="../HTML/Acadamics.html">Acadamics</a></li>
+                <li><a href="../HTML/Login.html" class="active">Admission</a></li>
+                <li><a href="../HTML/Staff_Login.html">Staff Login</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <div class="form-container">
+            <!-- Tabs Navigation -->
+            <div class="tab-navigation">
+                <button class="tab-btn active" id="course-tab" disabled>Select Course</button>
+                <button class="tab-btn" id="personal-tab" disabled>Personal Info</button>
+                <button class="tab-btn" id="review-tab" disabled>Review</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Select Course Tab -->
+                <div id="course" class="tab active-tab">
+                    <h3>Select Course</h3>
+                    <form id="personal-form">
+                        <select id="course" name="course" required>
+                            <!-- SCHOOL OF COMPUTER STUDIES -->
+                            <option value="B.Sc Computer Science">BSc Computer Science</option>
+                            <option value="BSc AI & ML">BSc AI & ML</option>
+                            <option value="BSc Data Science">BSc Data Science</option>
+                            <option value="BCA">BCA</option>
+                            <option value="BSc Information Technology">BSc Information Technology</option>
+                            <option value="MSc Computer Science">M.Sc Computer Science</option>
+                            <option value="MCA">MCA</option>
+                            <!-- ELECTRONICS -->
+                            <option value="B.Sc Electronics & Communication">B.Sc Electronics & Communication</option>
+                            <option value="B.Sc Internet Of Things">B.Sc Internet Of Things</option>
+                            <option value="M.Sc Applied Electronics">M.Sc Applied Electronics</option>
+                            <!-- SCHOOL OF MANAGEMENT -->
+                            <option value="BBA (Business Administration)">BBA (Business Administration)</option>
+                            <option value="BBA (Computer Application)">BBA (Computer Application)</option>
+                            <option value="BBA (Logistics)">BBA (Logistics)</option>
+                            <option value="MBA">MBA</option>
+                            <!-- SCHOOL OF COMMERCE -->
+                            <option value="B.Com (Computer Applications)">B.Com (Computer Applications)</option>
+                            <option value="B.Com (Information Technology)">B.Com (Information Technology)</option>
+                            <option value="B.Com (Accounting and Finance)">B.Com (Accounting and Finance)</option>
+                            <option value="B.Com (Professional Accounting)">B.Com (Professional Accounting)</option>
+                            <option value="B.Com (Business Analytics)">B.Com (Business Analytics)</option>
+                            <option value="M.Com">M.Com</option>
+                            <option value="M.Com (International Business)">M.Com (International Business)</option>
+                            <option value="M.Com (Computer Applications)">M.Com (Computer Applications)</option>
+                            <!-- FOODS & NUTRITION -->
+                            <option value="B.Sc Nutrition and Dietetics">B.Sc Nutrition and Dietetics</option>
+                            <option value="M.Sc Foods & Nutrition">M.Sc Foods & Nutrition</option>
+                            <!-- ENGLISH -->
+                            <option value="B.A. English Literature">B.A. English Literature</option>
+                            <option value="M.A. English Literature">M.A. English Literature</option>
+                            <!-- BIOCHEMISTRY -->
+                            <option value="B.Sc Biochemistry">B.Sc Biochemistry</option>
+                            <option value="M.Sc Biochemistry">M.Sc Biochemistry</option>
+                            <!-- BIOTECHNOLOGY -->
+                            <option value="B.Sc Biotechnology">B.Sc Biotechnology</option>
+                            <option value="M.Sc Biotechnology">M.Sc Biotechnology</option>
+                            <!-- MICROBIOLOGY -->
+                            <option value="B.Sc Microbiology">B.Sc Microbiology</option>
+                            <option value="M.Sc Microbiology">M.Sc Microbiology</option>
+                            <!-- MATHEMATICS -->
+                            <option value="B.Sc Maths">B.Sc Maths</option>
+                            <option value="M.Sc Maths">M.Sc Maths</option>
+                            <!-- PSYCHOLOGY -->
+                            <option value="B.Sc. Psychology">B.Sc. Psychology</option>
+                            <!-- CATERING SCIENCE AND HOTEL MANAGEMENT -->
+                            <option value="B.Sc. (CS and HM)">B.Sc. (CS and HM)</option>
+                        </select>
+                    </form>
+                    <button class="next-btn" id="next-course">Next</button>
+                </div>
+                
+                <!-- Personal Info Tab -->
+                <div id="personal" class="tab">
+                    <h3>Personal Information</h3>
+                    <form id="personal-form">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="dob" required>
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <label for="degree">Degree Applied For:</label>
+                        <input type="text" id="degree" name="degree" required>
+                        <label for="board">Board/University:</label>
+                        <input type="text" id="board" name="board" required>
+                        <label for="year">Year of Passing:</label>
+                        <input type="text" id="year" name="year" required>
+                    </form>
+                    <button class="next-btn" id="back-personal">Back</button>
+                    <button class="next-btn" id="next-personal">Next</button>
+                </div>
+
+                <!-- Review Tab -->
+                <div id="review" class="tab">
+                    <h3>Review Your Information</h3>
+                    <p>Review and Download the information you provided in the previous tabs. Confirm your details and submit your form.</p>
+                    <button class="next-btn" type="download" form="personal-form">Download Form</button>
+                    <button class="next-btn" type="submit" form="personal-form">Submit Application</button><br>
+                    <button class="next-btn" id="back-review">Back</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 GSTech. All rights reserved.</p>
+    </footer>
+
+    <script src="../JavaScript/Admission.js"></script>
+</body>
+</html>

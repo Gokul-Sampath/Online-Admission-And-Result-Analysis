@@ -1,0 +1,276 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #444;
+    line-height: 1.6;
+    padding-top: 80px;  /* Adjusting space for the fixed header */
+}
+
+/* Header Section */
+header {
+    background-color: rgb(12, 106, 143);
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo-img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.navbar .logo h2 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    background-color: orange;
+    border-radius: 5px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Dropdown for Mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgb(12, 106, 143);
+        width: 100%;  /* Full width */
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 12px;
+        font-size: 16px;
+        display: block;
+        width: 100%;  /* Make each link take up full width */
+    }
+
+    .nav-links li:first-child {
+        margin-top: 0;
+    }
+}
+
+/* Main Content Section */
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    width: 80%;
+    max-width: 1000px;
+    min-height: 80vh;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tab Navigation */
+.tab-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(12, 106, 143);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.tab-btn:hover {
+    background-color: rgb(44, 136, 173);
+}
+
+.tab-btn.active {
+    background-color: orange;
+}
+
+/* Tab Content */
+.tab-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab {
+    display: none;
+}
+
+.active-tab {
+    display: block;
+}
+
+form {
+    margin-top: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: orange;
+}
+
+/* Footer Section */
+footer {
+    background-color: rgb(12, 106, 143);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tab-btn {
+        width: 48%; /* Two buttons per row */
+        margin-right: 4%;
+    }
+
+    .tab-btn:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-btn {
+        width: 100%; /* Full width on very small screens */
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
+/* Styling for the "Next" Button */
+.next-btn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* Remove the default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 15px; /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* "Next" Button Hover Effect */
+.next-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* "Next" Button Disabled State */
+.next-btn:disabled {
+    background-color: #ccc; /* Light gray background when disabled */
+    cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .next-btn {
+        width: 100%; /* Full-width on smaller screens */
+        padding: 12px 0; /* Padding adjusted for better alignment */
+        font-size: 16px; /* Slightly larger text */
+    }
+}

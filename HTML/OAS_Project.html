@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSTech - Institute of Technology</title>
+    <!-- CSS_link -->
+    <link rel="stylesheet" href="../CSS/OAS_Project.css">
+</head>
+<body>
+
+    <!-- Header Section with Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="../HTML/OAS_Project.html"><img src="../image/logo.png" alt="College Logo" class="logo-img"></a>
+                <h2>GSTech</h2>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../HTML/OAS_Project.html" class="active">Home</a></li>
+                <li><a href="../HTML/About.html">About</a></li>
+                <li><a href="../HTML/Acadamics.html">Acadamics</a></li>
+                <li><a href="../HTML/Login.html">Admission</a></li>
+                <li><a href="../HTML/Staff_Login.html">Staff Login</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section (Auto-Scrolling Image Section with Arrows) -->
+    <section class="hero" id="home">
+        <div class="carousel">
+            <!-- <div class="carousel-slide">
+                <img src="../image/college.png" alt="Campus Image 1">
+            </div> -->
+            <div class="carousel-slide">
+                <img src="../image/Admission_Banner.png" alt="Campus Image 2">
+            </div>
+        </div>
+        <div class="carousel-arrows">
+            <span class="arrow prev" onclick="moveSlide(-1)">&#10094;</span>
+            <span class="arrow next" onclick="moveSlide(1)">&#10095;</span>
+        </div>
+    </section>
+
+    <section class="courses" id="courses">
+        <h2>Popular Courses</h2>
+        <div class="courses-container">
+            <div class="course-card">
+                <h3>Bachelor of Science <br>(BSc Computer Science)</h3>
+                <p>Duration: 3 Years</p>
+            </div>
+            <div class="course-card">
+                <h3>Bachelor of Technology (B.Tech)</h3>
+                <p>Duration: 3 Years</p>
+            </div>
+            <div class="course-card">
+                <h3>Master of Business Administration (MBA)</h3>
+                <p>Duration: 2 Years</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 GSTech. All rights reserved.</p>
+    </footer>
+
+    <script src="../JavaScript/OAS_Project.js"></script>
+</body>
+</html>
