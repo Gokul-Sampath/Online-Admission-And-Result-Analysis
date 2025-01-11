@@ -85,6 +85,11 @@ header {
 
 /* Dropdown for Mobile */
 @media (max-width: 768px) {
+    
+    body{
+        width: 100vh;
+        
+    }
     .hamburger {
         display: flex;
     }

@@ -1,18 +1,22 @@
- /* Global Styles */
- * {
+/* Reset and Body Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f7f7f7;
-    background-repeat: no-repeat;
-    background-size: cover;
     color: #444;
     line-height: 1.6;
-    padding-top: 80px;  /* Adjusting space for the fixed header */
+    padding-top: 80px; /* Account for fixed header */
+    min-height: 100vh; /* Ensure body covers the full viewport */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Header Section */
@@ -23,6 +27,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 100;
+    transition: all 0.3s ease-in-out;
 }
 
 .navbar {
@@ -49,10 +54,10 @@ header {
     margin: 0;
 }
 
+/* Unified Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    margin-left: auto;
 }
 
 .nav-links li {
@@ -71,163 +76,28 @@ header {
     border-radius: 5px;
 }
 
-/* Hamburger Menu */
+/* Mobile Navigation (Hamburger) */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 4px;
-}
-
-.hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-}
-
-/* Dropdown for Mobile */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: rgb(12, 106, 143);
-        width: 100%;  /* Full width */
-        flex-direction: column;
-        padding: 10px;
-        border-radius: 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
-
-    .nav-links.active {
-        display: block;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-        text-align: center;
-        width: 100%;
-    }
-
-    .nav-links a {
-        padding: 12px;
-        font-size: 16px;
-        display: block;
-        width: 100%;  /* Make each link take up full width */
-    }
-
-    .nav-links li:first-child {
-        margin-top: 0;
-    }
-}
-
-/* Sidebar Navigation */
-.sidebar {
-    position: fixed;
-    top:8vh;
-    left: 0;
-    background-color: rgb(12, 106, 143);
-    height: 100%;
-    width: 250px;
-    padding-top: 20px;
-    display: block;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li a {
-    display: block;
-    color: #fff;
-    padding: 15px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: small;
-}
-
-.sidebar ul li a:hover {
-    background-color: orange;
-}
-
-/* Main Content Styling */
-.content {
-    margin-left: 250px;
-    padding: 20px;
-}
-
-.content-section {
-    display: none;
-}
-
-.content-section.active {
-    display: block;
-}
-
-.section-header {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-/* Style for the active link */
-.sidebar a.active {
-    background-color: orange; /* Change this to your preferred shade of orange */
-}
-
-
-
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Body & Page Setup */
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .course-container {
-    display: flex;
+    width: 30px;
+    height: 25px;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 50px;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 4px;
     background-color: #fff;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Course Information */
-  .course-info {
-    flex: 1;
-    max-width: 100%;
-    padding-right: 30px;
-  }
-  
-  .course-info h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-  
-  .course-info p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-  }
-  
-  .enroll-btn {
+}
+
+.topic{
+    text-align: center;
+}
+
+/* button styles */
+.enroll-btn {
     background-color: rgb(12, 106, 143);
     color: white;
     font-size: 1.1rem;
@@ -242,71 +112,174 @@ header {
   .enroll-btn:hover {
     background-color: orange;
   }
-  
-  /* Course Image */
-  .course-image {
-    flex: 1;
-    max-width: 45%;
-  }
-  
-  .course-image img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .course-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .course-info {
-      max-width: 100%;
-      padding-right: 0;
-      text-align: center;
-    }
-  
-    .course-image {
-      max-width: 80%;
-      margin-top: 20px;
-    }
-  }
-  
 
-/* Footer Styling */
-footer {
+/* Collapsible Menu for Mobile */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(12, 106, 143);
     text-align: center;
-    padding: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.mobile-menu a {
+    padding: 12px;
+    color: white;
+    font-size: 20px;
+    display: block;
+    transition: 0.3s;
+}
+
+.mobile-menu a:hover {
+    background-color: orange;
+    border-radius: 5px;
+}
+
+/* Main Content Styling */
+.main-content {
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+    background-color: rgb(172, 221, 222);
+}
+
+.main-content h2 {
+    font-size: 36px;
+    color: #001f3d;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* CEO Profile Section */
+.ceo-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.ceo-profile img {
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 40px;
+    border: 4px solid black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.ceo-profile .ceo-info {
+    max-width: 700px;
+}
+
+.ceo-profile .ceo-info h3 {
+    font-size: 32px;
+    color: #001f3d;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.ceo-profile .ceo-info p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.d1{
+    /* background-color: RGB: (172, 221, 222); */
+    background-color: rgb(172, 221, 222);
+}
+
+/* course-card1 and course-card2 Section */
+.course-description {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.course-description h3 {
+    font-size: 28px;
+    color: #001f3d;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.course-description p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.8;
+    max-width: 550px;
+}
+
+.course-description .course-card1, .course-description .course-card2 {
+    width: 48%;
+    margin-bottom: 30px;
+}
+
+/* Footer Section */
+footer {
     background-color: rgb(12, 106, 143);
     color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar .nav-links {
+    body{
+        width: 100vh;
+    }
+    .nav-links {
         display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .sidebar {
-        width: 200px;
-    }
-
-    .content {
-        margin-left: 0;
     }
 
     .hamburger {
-        display: block;
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .hamburger div {
+        background-color: #fff;
+    }
+
+    .main-content {
+        margin-top: 60px;
+    }
+
+    .ceo-profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ceo-profile img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .course-description {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-description .course-card1, .course-description .course-card2 {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }

@@ -151,10 +151,10 @@ header {
     width: 340px;
     height: 340px;
     object-fit: cover;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     margin-right: 40px;
-    border: 4px solid black;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    /* border: 4px solid black; */
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
 }
 
 .ceo-profile .ceo-info {
@@ -204,15 +204,23 @@ header {
 
 /* Footer Section */
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: rgb(12, 106, 143);
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+    padding: 15px;
+    z-index: 10; /* Keeps footer above other elements */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body{
+        width: 100vh;
+    }
+    
     .nav-links {
         display: none;
     }
@@ -251,5 +259,9 @@ footer {
     .mission-vision .mission, .mission-vision .vision {
         width: 100%;
         margin-bottom: 20px;
+    }
+    footer{
+        font-size: 14px;
+        padding: 15px;
     }
 }

@@ -10,8 +10,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: rgb(12, 106, 143);
-    height: 100%;
     overflow-x: hidden;
+    
 }
 a{
     text-decoration: none
@@ -154,7 +154,7 @@ header {
 /* Carousel */
 .carousel {
     display: flex;
-    height: 60vh;
+    height:fit-content;
     transition: transform 1s ease-in-out;
 }
 
@@ -231,10 +231,15 @@ header {
 
 /* Footer Section */
 footer {
-    padding: 20px;
-    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: rgb(12, 106, 143);
     color: white;
+    text-align: center;
+    padding: 15px;
+    z-index: 10; /* Keeps footer above other elements */
 }
 
 /* Responsive Media Queries */
@@ -271,6 +276,7 @@ footer {
 @media (max-width: 768px) {
     .hero{
         max-height: 35vh;
+        width: 100vh;
     }
     .nav-links {
         display: none;
@@ -299,6 +305,12 @@ footer {
     .carousel img {
         height: 250px;
     }
+    .courses {
+        flex-direction: column;
+        align-items: center;
+        width: 100vh;
+        height: 100vh;
+    }
 
     .hero h1 {
         font-size: 30px;
@@ -307,8 +319,8 @@ footer {
     .hero p {
         font-size: 16px;
     }
-
-    .footer {
-        font-size: 12px;
+    footer{
+        font-size: 14px;
+        padding: 15px;
     }
 }

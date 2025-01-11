@@ -7,7 +7,7 @@ hamburger.addEventListener('click', () => {
 });
 
 // Hardcoded email/password for demo purposes
-const correctEmail = "gokulsampath357@gmail.com";
+const correctEmail = "gokul@gmail.com";
 const correctPassword = "123456";
 
 // Generate a random 6-digit OTP

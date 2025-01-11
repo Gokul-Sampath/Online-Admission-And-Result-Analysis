@@ -12,6 +12,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             color: #444;
+            
             line-height: 1.6;
             padding-top: 80px;  /* Adjusting space for the fixed header */
         }
@@ -203,9 +204,28 @@
 
 /* Footer Section */
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: rgb(12, 106, 143);
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+    padding: 15px;
+    z-index: 10; /* Keeps footer above other elements */
+}
+
+@media (max-width: 768px) {
+    
+    body{
+        width: 100vh;
+        position: absolute;
+        bottom: 0;
+        background-size: 100vh 100vh;
+        
+    }
+    footer{
+        font-size: 14px;
+        padding: 15px;
+    }
 }
