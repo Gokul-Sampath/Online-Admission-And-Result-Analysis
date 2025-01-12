@@ -26,3 +26,8 @@ function moveSlide(n) {
 setInterval(() => {
     moveSlide(1);
 }, 3000); // Auto slide every 3 seconds
+
+//Disable Right click
+document.addEventListener('contextmenu', event => {
+    event.preventDefault();
+});

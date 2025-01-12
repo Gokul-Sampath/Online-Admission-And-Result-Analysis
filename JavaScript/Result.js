@@ -929,3 +929,9 @@ hamburger.addEventListener('click', () => {
         document.getElementById('sem5mark').textContent = student.sem5mark;
         document.getElementById('sem6mark').textContent = student.sem6mark;
     }
+
+
+    //Disable Right click
+document.addEventListener('contextmenu', event => {
+    event.preventDefault();
+});

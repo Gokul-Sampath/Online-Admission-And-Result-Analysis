@@ -44,3 +44,8 @@ document.getElementById('verifyOtp').addEventListener('click', function() {
         alert("Invalid OTP! Please try again.");
     }
 });
+
+//Disable Right click
+document.addEventListener('contextmenu', event => {
+    event.preventDefault();
+});

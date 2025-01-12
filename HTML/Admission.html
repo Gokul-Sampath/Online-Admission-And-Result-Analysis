@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="../CSS/Admission.css">
 </head>
 <body>
-
     <!-- Header Section -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="../image/logo.png" alt="Logo" class="logo-img"> <!-- Add logo here -->
+                <img src="../image/logo.png" alt="Logo" class="logo-img">
                 <h2>GSTech</h2>
             </div>
             <ul class="nav-links" id="nav-links">
@@ -35,9 +34,9 @@
         <div class="form-container">
             <!-- Tabs Navigation -->
             <div class="tab-navigation">
-                <button class="tab-btn active" id="course-tab" disabled>Select Course</button>
-                <button class="tab-btn" id="personal-tab" disabled>Personal Info</button>
-                <button class="tab-btn" id="review-tab" disabled>Review</button>
+                <button class="tab-btn active" id="course-tab">Select Course</button>
+                <button class="tab-btn" id="personal-tab">Personal Info</button>
+                <button class="tab-btn" id="review-tab">Review</button>
             </div>
 
             <!-- Tab Content -->
@@ -45,8 +44,10 @@
                 <!-- Select Course Tab -->
                 <div id="course" class="tab active-tab">
                     <h3>Select Course</h3>
-                    <form id="personal-form">
+                    <form id="course-form">
+                        <label for="course">Course:</label>
                         <select id="course" name="course" required>
+                            <option value="">Select a Course</option>
                             <!-- SCHOOL OF COMPUTER STUDIES -->
                             <option value="B.Sc Computer Science">BSc Computer Science</option>
                             <option value="BSc AI & ML">BSc AI & ML</option>
@@ -99,27 +100,77 @@
                     </form>
                     <button class="next-btn" id="next-course">Next</button>
                 </div>
-                
+
                 <!-- Personal Info Tab -->
                 <div id="personal" class="tab">
                     <h3>Personal Information</h3>
                     <form id="personal-form">
                         <label for="first-name">First Name:</label>
                         <input type="text" id="first-name" name="first-name" required>
+
                         <label for="last-name">Last Name:</label>
                         <input type="text" id="last-name" name="last-name" required>
+
                         <label for="dob">Date of Birth:</label>
                         <input type="date" id="dob" name="dob" required>
+
                         <label for="gender">Gender:</label>
                         <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                             <option value="other">Other</option>
                         </select>
-                        <label for="degree">Degree Applied For:</label>
-                        <input type="text" id="degree" name="degree" required>
-                        <label for="board">Board/University:</label>
-                        <input type="text" id="board" name="board" required>
+
+                        <label for="location">Location:</label>
+                        <select id="location" name="location" required>
+                            <option value="">Select Gender</option>
+                            <option value="ARIYALUR">ARIYALUR</option>
+                            <option value="CHENGALPATTU">CHENGALPATTU</option>
+                            <option value="CHENNAI">CHENNAI</option>
+                            <option value="COIMBATORE">COIMBATORE</option>
+                            <option value="CUDDALORE">CUDDALORE</option>
+                            <option value="DHARMAPURI">DHARMAPURI</option>
+                            <option value="DINDIGUL">DINDIGUL</option>
+                            <option value="ERODE">ERODE</option>
+                            <option value="KALLAKURICHI">KALLAKURICHI</option>
+                            <option value="KANCHIPURAM">KANCHIPURAM</option>
+                            <option value="KARUR">KARUR</option>
+                            <option value="KRISHNAGIRI">KRISHNAGIRI</option>
+                            <option value="MADURAI">MADURAI</option>
+                            <option value="MAYILADUTHURAI">MAYILADUTHURAI</option>
+                            <option value="NAGAPATTINAM">NAGAPATTINAM</option>
+                            <option value="KANYAKUMARI">KANYAKUMARI</option>
+                            <option value="NAMAKKAL">NAMAKKAL</option>
+                            <option value="PERAMBALUR">PERAMBALUR</option>
+                            <option value="PUDUKKOTTAI">PUDUKKOTTAI</option>
+                            <option value="RAMANATHAPURAM">RAMANATHAPURAM</option>
+                            <option value="RANIPET">RANIPET</option>
+                            <option value="SALEM">SALEM</option>
+                            <option value="SIVAGANGAI">SIVAGANGAI</option>
+                            <option value="TENKASI">TENKASI</option>
+                            <option value="THANJAVUR">THANJAVUR</option>
+                            <option value="THENI">THENI</option>
+                            <option value="THIRUVALLUR">THIRUVALLUR</option>
+                            <option value="THIRUVARUR">THIRUVARUR</option>
+                            <option value="TUTICORIN">THIRUVARUR</option>
+                            <option value="TRICHIRAPPALLI">TRICHIRAPPALLI</option>
+                            <option value="THIRUNELVELI">THIRUNELVELI</option>
+                            <option value="TIRUPATTUR">TIRUPATTUR</option>
+                            <option value="TIRUPPUR">TIRUPPUR</option>
+                            <option value="THIRUVANNAMALAI">THIRUVANNAMALAI</option>
+                            <option value="NILGIRIS">NILGIRIS</option>
+                            <option value="VELLORE">VELLORE</option>
+                            <option value="VILUPPURAM">VILUPPURAM</option>
+                            <option value="VIRUDHUNAGAR">VIRUDHUNAGAR</option>
+                        </select>
+
+                        <label for="mobile">Mobile Number:</label>
+                        <input type="number" id="mobile" name="mobile" required>
+
+                        <label for="school">School:</label>
+                        <input type="text" id="school" name="school" required>
+
                         <label for="year">Year of Passing:</label>
                         <input type="text" id="year" name="year" required>
                     </form>
@@ -131,17 +182,12 @@
                 <div id="review" class="tab">
                     <h3>Review Your Information</h3>
                     <p>Review the information you provided in the previous tabs. Confirm your details and submit your form.</p>
-                    <button class="next-btn" type="download" form="personal-form">Back</button>
-                    <button class="next-btn" type="submit" form="personal-form">Submit Application</button><br>
+                    <button class="next-btn" id="back-review">Back</button>
+                    <button class="next-btn" id="submit-form">Submit</button>
                 </div>
             </div>
         </div>
     </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 GSTech. All rights reserved.</p>
-    </footer>
 
     <script src="../JavaScript/Admission.js"></script>
 </body>

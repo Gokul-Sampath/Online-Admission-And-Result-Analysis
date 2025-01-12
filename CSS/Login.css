@@ -215,17 +215,18 @@ footer {
     z-index: 10; /* Keeps footer above other elements */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1235px) {
     
     body{
-        width: 100vh;
-        position: absolute;
-        bottom: 0;
-        background-size: 100vh 100vh;
-        
+        background-image: linear-gradient(rgb(12, 106, 143), orange);
+        height: 100vh;
     }
     footer{
         font-size: 14px;
         padding: 15px;
     }
+}
+
+@media (max-width: 480px) {
+
 }

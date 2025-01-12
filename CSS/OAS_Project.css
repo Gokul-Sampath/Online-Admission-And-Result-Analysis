@@ -230,16 +230,13 @@ header {
 }
 
 /* Footer Section */
+
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     background-color: rgb(12, 106, 143);
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 15px;
-    z-index: 10; /* Keeps footer above other elements */
+    padding: 20px 0;
+    margin-top: 40px;
 }
 
 /* Responsive Media Queries */
@@ -322,5 +319,16 @@ footer {
     footer{
         font-size: 14px;
         padding: 15px;
+    }
+    footer {
+        position:fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgb(12, 106, 143);
+        color: white;
+        text-align: center;
+        padding: 15px;
+        z-index: 10; /* Keeps footer above other elements */
     }
 }

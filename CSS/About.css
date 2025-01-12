@@ -10,8 +10,13 @@ body {
     background-color: #f7f7f7;
     color: #444;
     line-height: 1.6;
-    padding-top: 80px; /* Account for fixed header */
+    padding-top: 60px; /* Account for fixed header */
     min-height: 100vh; /* Ensure body covers the full viewport */
+    /* background-color: gray; */
+}
+img{
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
 }
 
 a {
@@ -145,16 +150,19 @@ header {
     justify-content: center;
     margin-bottom: 50px;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .ceo-profile img {
-    width: 340px;
-    height: 340px;
+    width: auto;
+    height: auto;
     object-fit: cover;
     /* border-radius: 10px; */
     margin-right: 40px;
     /* border: 4px solid black; */
     /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
+    margin-bottom: 25px;
+
 }
 
 .ceo-profile .ceo-info {
@@ -204,21 +212,17 @@ header {
 
 /* Footer Section */
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
     background-color: rgb(12, 106, 143);
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 15px;
-    z-index: 10; /* Keeps footer above other elements */
+    padding: 20px 0;
+    margin-top: 40px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     body{
-        width: 100vh;
+        width: 100%;
     }
     
     .nav-links {
@@ -239,16 +243,24 @@ footer {
 
     .main-content {
         margin-top: 60px;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        overflow: scroll;
+
     }
 
     .ceo-profile {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .ceo-profile img {
         margin-right: 0;
         margin-bottom: 20px;
+        width: 240px;
+        height: 240px;
     }
 
     .mission-vision {

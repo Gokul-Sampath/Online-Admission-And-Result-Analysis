@@ -30,3 +30,8 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         alert("Invalid email or password!");
     }
 });
+
+//Disable Right click
+// document.addEventListener('contextmenu', event => {
+//     event.preventDefault();
+// });
