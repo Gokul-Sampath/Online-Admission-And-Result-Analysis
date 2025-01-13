@@ -46,29 +46,44 @@
 
     <!-- Main Content Section -->
     <section class="main-content">
-        <!-- CEO Profile Section -->
-        <div class="ceo-profile">
-            <img src="../image/ceo_image.png" alt="CEO Photo">
-            <div class="ceo-info">
-                <h3>Mr Gokul Sampath</h3>
-                <p><strong>Project Developer</strong></p>
-                <p>Mr Gokul is a visionary leader with over 25 years of experience in the field. He has a passion for innovation and leadership, driving the company toward sustainable growth and success. Under his leadership, the company has achieved remarkable milestones, always focusing on excellence and social responsibility.</p>
-                <!-- <p>Throughout his career, Mr P. Guganathan has been an advocate for empowering others, fostering an environment of collaboration, and delivering impactful change in the industry. He believes that true leadership lies in inspiring others to achieve their full potential and creating a future that benefits all stakeholders.</p> -->
-            </div>
-        </div>
-        <hr>
+        
 
-        <!-- Mission and Vision Section -->
-        <div class="mission-vision">
-            <div class="mission">
-                <h3>Mission</h3>
-                <p>Our mission is to provide innovative, high-quality educational solutions that foster creativity, critical thinking, and leadership in our students. We are committed to preparing students for a rapidly evolving world and enabling them to succeed in their careers.</p>
-            </div>
-            <div class="vision">
-                <h3>Vision</h3>
-                <p>Our vision is to become a global leader in education, known for our transformative impact on individuals, organizations, and communities. We strive to create an inclusive and sustainable learning environment that supports lifelong learning and development.</p>
-            </div>
-        </div>
+        <!-- Project Details -->
+        <h2>About the Project</h2>
+
+        <section>
+            <h3>Project Overview</h3>
+            <p>This project is a web-based application aimed at simplifying and automating the admission process and result management system for educational institutions. Built with modern web technologies, it ensures accessibility, transparency, and a user-friendly experience for students and administrators alike.</p>
+        </section>
+
+        <section>
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Home Page:</strong> Engaging design with advertisement sliding banners, popular course details, and college highlights.</li>
+                <li><strong>About Section:</strong> Information about the developer and the project’s purpose and goals.</li>
+                <li><strong>Academics Module:</strong> Comprehensive details of courses including their structure, duration, and eligibility requirements.</li>
+                <li><strong>Admission Module:</strong> Multi-step process including eligibility checks, course and personal information collection, and a review section.</li>
+                <li><strong>Result Module:</strong> Personalized student dashboard displaying attendance percentage, CGP, and detailed mark charts.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Technology Stack</h3>
+            <p><strong>Languages and Tools Used:</strong> HTML, CSS, JavaScript</p>
+            <p><strong>Development Platform:</strong> Visual Studio Code (VS Code)</p>
+            <p><strong>Hosting Platform:</strong> <a href="https://www.neocities.org" target="_blank">Neocities</a></p>
+        </section>
+
+        <section>
+            <h3>Live Project and Repository</h3>
+            <p><strong>Live Project Link:</strong> <a href="https://gokulsampath.neocities.org/FY_Project_2025/HTML/OAS_Project" target="_blank">View Live Project</a></p>
+            <p><strong>GitHub Repository:</strong> <a href="https://github.com/Gokul-Sampath/Online-Admission-And-Result-Analysis" target="_blank">View Repository</a></p>
+        </section>
+
+        <section>
+            <h3>Conclusion</h3>
+            <p>The Online Admission and Result Analysis project demonstrates how web technologies can be effectively used to address real-world challenges in the education sector. Its intuitive design and automation capabilities make it a valuable asset for modern institutions looking to streamline their workflows.</p>
+        </section>
 
     </section>
 
@@ -78,7 +93,19 @@
     </footer>
 
     <!-- JavaScript for Hamburger Toggle -->
-    <script src="../JavaScript/About.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+//Disable Right click
+document.addEventListener('contextmenu', event => {
+    event.preventDefault();
+});
+    </script>
 
 </body>
 </html>

@@ -4,6 +4,9 @@
             padding: 0;
             box-sizing: border-box;
         }
+        html {
+            scroll-behavior: smooth;
+          }
         
         body {
             font-family: Arial, sans-serif;
@@ -12,6 +15,140 @@
             line-height: 1.6;
             padding-top: 80px; /* Adjusting space for the fixed header */
         }
+
+        /* radio */
+        /* Enhanced Styling for the Eligibility Tab */
+#eligibility {
+    background-color: #e3f2fd; 
+    padding: 40px 20px;
+    border: 1px solid #90caf9;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#eligibility h1 {
+    color: rgb(12, 106, 143);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#eligibility h3 {
+    color: rgb(12, 106, 143);
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+#eligibility .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+}
+
+#eligibility label {
+    color: rgb(12, 106, 143);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-align: left;
+    flex: 1;
+    min-width: 200px;
+}
+
+#eligibility .radio-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#eligibility .radio-option {
+    display: flex;
+    align-items: center;
+}
+
+#next-eligibility {
+    padding: 10px 20px;
+            font-size: 16px;
+            background-color: rgb(12, 106, 143);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin-bottom: 10px;
+}
+
+#next-eligibility:hover {
+    background-color: orange;
+}
+
+#next-eligibility:active {
+    background-color: #01579b;
+}
+
+/* Enhancing Responsiveness for Mobile View */
+@media (max-width: 768px) {
+    #eligibility {
+        padding: 25px 15px;
+        margin: 20px auto;
+        box-shadow: none;
+        border: none;
+    }
+
+    #eligibility h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    #eligibility h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    #next-eligibility {
+        padding: 12px 40px;
+        font-size: 1.1rem;
+        margin-top: 20px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    form input, form select {
+        max-width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    form input[type="radio"], form input[type="checkbox"] {
+        margin-right: 8px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .radio-option {
+        margin-bottom: 10px;
+    }
+}
+
         
         /* Header Section */
         header {
@@ -224,8 +361,7 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .tab-btn {
-                width: 48%; /* Two buttons per row */
-                margin-right: 4%;
+                width: 48%;
             }
         
             .tab-btn:nth-child(2n) {

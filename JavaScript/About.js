@@ -6,6 +6,6 @@ const hamburger = document.getElementById('hamburger');
         });
 
 //Disable Right click
-// document.addEventListener('contextmenu', event => {
-//     event.preventDefault();
-// });
+document.addEventListener('contextmenu', event => {
+    event.preventDefault();
+});
