@@ -49,7 +49,9 @@ The Online Admission and Result Analysis project is a web-based application desi
   - Registration Number
   - Attendance Percentage
   - Cumulative Grade Point (CGP)
-  - Detailed Mark Chart
+  - Last Semester Result and
+  - Detailed Analysis on Result by Graphical Presentation of chart
+
 
 ---
 
