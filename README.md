@@ -86,4 +86,5 @@ The Online Admission and Result Analysis project showcases the practical applica
 **References:**  
 - [Live Project Link](https://gokulsampath.neocities.org/FY_Project_2025/HTML/OAS_Project)  
 - [GitHub Repository](https://github.com/Gokul-Sampath/Online-Admission-And-Result-Analysis)
+- [Project Documentation](https://gokulsampath.neocities.org/FY_Project_2025/Final%20year%20project%20Documentation%202022-2025.pdf)
 
