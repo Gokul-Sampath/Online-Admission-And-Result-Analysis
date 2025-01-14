@@ -4,7 +4,7 @@
 **Course:** BSc Computer Science  
 **College:** RVS College of Arts and Science  
 
-**Live Project Link:** [Online Admission and Result Analysis](https://gokulsampath.neocities.org/FY_Project_2025/HTML/OAS_Project)  
+**Live Project Link:** [Online Admission and Result Analysis](https://gokulsampath.neocities.org/FY_Project_2025/HTML/Home)  
 **GitHub Repository:** [Online Admission and Result Analysis - GitHub](https://github.com/Gokul-Sampath/Online-Admission-And-Result-Analysis)  
 
 **Project Title:** Online Admission and Result Analysis  
@@ -84,7 +84,7 @@ The Online Admission and Result Analysis project showcases the practical applica
 ---
 
 **References:**  
-- [Live Project Link](https://gokulsampath.neocities.org/FY_Project_2025/HTML/OAS_Project)  
+- [Live Project Link](https://gokulsampath.neocities.org/FY_Project_2025/HTML/Home)  
 - [GitHub Repository](https://github.com/Gokul-Sampath/Online-Admission-And-Result-Analysis)
 - [Project Documentation](https://gokulsampath.neocities.org/FY_Project_2025/Final%20year%20project%20Documentation%202022-2025.pdf)
 
