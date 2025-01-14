@@ -169,6 +169,7 @@ downloadFormBtn.addEventListener('click', function () {
     }).from(elementToDownload).save();
 });
 
+//Disable Right click
 document.addEventListener('contextmenu', event => {
     event.preventDefault();
 });

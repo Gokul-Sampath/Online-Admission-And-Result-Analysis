@@ -37,7 +37,7 @@ document.getElementById('verifyOtp').addEventListener('click', function() {
 
     // Validate OTP
     if (enteredOtp === correctOtp.toString()) {
-        alert("OTP verified successfully! You are now logged in.");
+        alert("OTP verified successfully! You are Registered.");
         // Redirect to another page (e.g., dashboard)
         window.location.href = "../HTML/Login.html"; // Example redirect
     } else {

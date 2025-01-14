@@ -1,17 +1,15 @@
-/* Reset default margin and padding */
 body, h1, h2, p, table, input, button {
     margin: 0;
     padding: 0;
 }
+
 html {
     scroll-behavior: smooth;
-  }
+}
 
 body {
     font-family: Arial, sans-serif;
-    /* background-color: #1e1e2f; */
     background-image: url("../image/College_CS_Department.png");
-    /* background-repeat: no-repeat; */
     background-size: cover;
     color: #ffffff;
     display: flex;
@@ -19,7 +17,6 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
-    /* overflow: hidden; */
 }
 
 /* Header Section */
@@ -125,7 +122,7 @@ header {
         padding: 12px;
         font-size: 16px;
         display: block;
-        width: 100%;  /* Make each link take up full width */
+        width: 100%;
     }
 
     .nav-links li:first-child {
@@ -156,7 +153,6 @@ h1 {
     margin: 10px 0;
     border: 1px solid #444;
     border-radius: 5px;
-    /* background-color: #1e1e2f; */
     background-color: white;
     color: black;
 }
@@ -214,9 +210,7 @@ h1 {
     background-color: #29294b;
     padding: 10px;
     border-radius: 10px;
-    /* padding-bottom: 10px; */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    /* transition: transform 0.2s, box-shadow 0.2s; */
 }
 
 .dashboard {
@@ -229,7 +223,6 @@ h1 {
 
 .dashboard-container{
     margin-top: 50px;
-    /* margin-bottom: 100px; */
 }
 
 .card {
@@ -265,6 +258,35 @@ h1 {
 .data-table th {
     background-color: #3d3d5c;
     color: #ffa500;
+}
+
+.college-name {
+    margin-top: -10px;
+}
+
+.section{
+height: 110%;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex: 1;
+margin-top: 15vh;
+}
+
+button{
+color: white;
+}
+
+/* Footer Section */
+footer {
+position: relative;
+bottom: 0;
+width: 100%;
+background-color: rgb(12, 106, 143);
+color: white;
+text-align: center;
+padding: 20px 0;
 }
 
 /* Media Query for Smaller Screens */
@@ -315,35 +337,4 @@ h1 {
     margin-top: 0vh;
 
     }
-}
-
-.college-name {
-        margin-top: -10px;
-}
-
-.section{
-    height: 110%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    margin-top: 15vh;
-    }
-
-button{
-    color: white;
-}
-
-/* Footer Section */
-footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(12, 106, 143);
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    /* padding: 15px; */
-    /* margin-top: auto; Push footer to the bottom when content is short */
 }

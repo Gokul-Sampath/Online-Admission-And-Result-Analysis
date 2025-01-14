@@ -5,27 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Details</title>
     <link rel="stylesheet" href="../CSS/About.css">
-
 </head>
 <body>
-
     <!-- Header Section -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="../HTML/OAS_Project.html"><img src="../image/logo.png" alt="College Logo" class="logo-img"></a>
+                <a href="../HTML/Home.html"><img src="../image/logo.png" alt="College Logo" class="logo-img"></a>
                 <h2>GSTech</h2>
             </div>
-
             <!-- Unified Nav Links -->
             <ul class="nav-links" id="nav-links">
-                <li><a href="../HTML/OAS_Project.html">Home</a></li>
+                <li><a href="../HTML/Home.html">Home</a></li>
                 <li><a href="../HTML/About.html" class="active">About</a></li>
                 <li><a href="../HTML/Acadamics.html">Acadamics</a></li>
                 <li><a href="../HTML/Login.html">Admission</a></li>
                 <li><a href="../HTML/Result.html">Result</a></li>
             </ul>
-
             <!-- Hamburger Menu Icon -->
             <div class="hamburger" id="hamburger">
                 <div></div>
@@ -33,29 +29,26 @@
                 <div></div>
             </div>
         </nav>
-
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobile-menu">
-            <a href="../HTML/OAS_Project.html">Home</a>
+            <a href="../HTML/Home.html">Home</a>
             <a href="../HTML/About.html">About</a>
             <a href="../HTML/Acadamics.html">Acadamics</a>
             <a href="../HTML/Login.html">Admission</a>
             <a href="../HTML/Result.html">Result</a>
         </div>
     </header>
-
     <!-- Main Content Section -->
     <section class="main-content">
-        
-
         <!-- Project Details -->
-        <h2>About the Project</h2>
-
+        <h2>Online Admission and Result Analysis</h2>
+        <h2>Project Description</h2>
         <section>
             <h3>Project Overview</h3>
             <p>This project is a web-based application aimed at simplifying and automating the admission process and result management system for educational institutions. Built with modern web technologies, it ensures accessibility, transparency, and a user-friendly experience for students and administrators alike.</p>
         </section>
-
+        <hr>
+        <hr>
         <section>
             <h3>Key Features</h3>
             <ul>
@@ -66,46 +59,37 @@
                 <li><strong>Result Module:</strong> Personalized student dashboard displaying attendance percentage, CGP, and detailed mark charts.</li>
             </ul>
         </section>
-
+        <hr>
+        <hr>
         <section>
             <h3>Technology Stack</h3>
             <p><strong>Languages and Tools Used:</strong> HTML, CSS, JavaScript</p>
             <p><strong>Development Platform:</strong> Visual Studio Code (VS Code)</p>
             <p><strong>Hosting Platform:</strong> <a href="https://www.neocities.org" target="_blank">Neocities</a></p>
         </section>
-
+        <hr>
+        <hr>
         <section>
             <h3>Live Project and Repository</h3>
             <p><strong>Live Project Link:</strong> <a href="https://gokulsampath.neocities.org/FY_Project_2025/HTML/OAS_Project" target="_blank">View Live Project</a></p>
             <p><strong>GitHub Repository:</strong> <a href="https://github.com/Gokul-Sampath/Online-Admission-And-Result-Analysis" target="_blank">View Repository</a></p>
+            <p><strong>Project Documentation:</strong> <a href="../Final year project Documentation 2022-2025.pdf" target="_blank">View Documentation</a></p>
         </section>
-
+        <hr>
+        <hr>
         <section>
             <h3>Conclusion</h3>
             <p>The Online Admission and Result Analysis project demonstrates how web technologies can be effectively used to address real-world challenges in the education sector. Its intuitive design and automation capabilities make it a valuable asset for modern institutions looking to streamline their workflows.</p>
         </section>
-
+        <hr>
+        <hr>
     </section>
-
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 GSTech. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript for Hamburger Toggle -->
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-        });
-
-//Disable Right click
-document.addEventListener('contextmenu', event => {
-    event.preventDefault();
-});
-    </script>
+    <script src="../JavaScript/About.js"></script>
 
 </body>
 </html>

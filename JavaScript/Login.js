@@ -3,16 +3,12 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');  // Toggle the visibility of the nav links
+    navLinks.classList.toggle('active');
 });
 
 // Hardcoded email/password for demo purposes
 const correctEmail = "gokul@gmail.com";
 const correctPassword = "123456";
-
-// Generate a random 6-digit OTP
-let randomNumber = Math.floor(100000 + Math.random() * 900000);
-var correctOtp = randomNumber;  // Simulated OTP
 
 // Login form submission handler
 document.getElementById('loginForm').addEventListener('submit', function(e) {
@@ -24,7 +20,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     // Validate email and password
     if (email === correctEmail && password === correctPassword) {
         alert("You are now logged in.");
-        // Redirect to another page (e.g., dashboard)
+        // Redirect to Admission Form
         window.location.href = "../HTML/Admission.html";
     } else {
         alert("Invalid email or password!");
@@ -32,6 +28,6 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 });
 
 //Disable Right click
-// document.addEventListener('contextmenu', event => {
-//     event.preventDefault();
-// });
+document.addEventListener('contextmenu', event => {
+    event.preventDefault();
+});
