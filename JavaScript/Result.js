@@ -13,14 +13,14 @@ hamburger.addEventListener('click', () => {
             regNo: "1u22cs039",
             password: "1u22cs039",
             name: "Gokul S",
-            sem1mark: 8.63,
-            sem2mark: 7.68,
-            sem3mark: 8.18,
-            sem4mark: 8.35,
-            sem5mark: 0,
+            mark1: 95,
+            mark2: 86,
+            mark3: 70,
+            mark4: 73,
+            mark5: 0,
             sem6mark: 0,
             cgpamark: 8.21,
-            attendance: 87,
+            attendance: 85,
             photo: "../image/Student_Photos/1u22cs039.jpg"
         }
     ];
@@ -54,11 +54,11 @@ hamburger.addEventListener('click', () => {
         document.getElementById('studentPhoto').src = student.photo;
 
         // Fill in subject marks
-        document.getElementById('sem1mark').textContent = student.sem1mark;
-        document.getElementById('sem2mark').textContent = student.sem2mark;
-        document.getElementById('sem3mark').textContent = student.sem3mark;
-        document.getElementById('sem4mark').textContent = student.sem4mark;
-        document.getElementById('sem5mark').textContent = student.sem5mark;
+        document.getElementById('mark1').textContent = student.mark1;
+        document.getElementById('mark2').textContent = student.mark2;
+        document.getElementById('mark3').textContent = student.mark3;
+        document.getElementById('mark4').textContent = student.mark4;
+        document.getElementById('mark5').textContent = student.mark5;
         document.getElementById('sem6mark').textContent = student.sem6mark;
     }
 
