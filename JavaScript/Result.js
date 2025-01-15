@@ -13,13 +13,13 @@ hamburger.addEventListener('click', () => {
             regNo: "1u22cs039",
             password: "1u22cs039",
             name: "Gokul S",
-            sem1mark: 0,
-            sem2mark: 0,
-            sem3mark: 0,
-            sem4mark: 0,
+            sem1mark: 8.63,
+            sem2mark: 7.68,
+            sem3mark: 8.18,
+            sem4mark: 8.35,
             sem5mark: 0,
             sem6mark: 0,
-            cgpamark: 0,
+            cgpamark: 8.21,
             attendance: 87,
             photo: "../image/Student_Photos/1u22cs039.jpg"
         }

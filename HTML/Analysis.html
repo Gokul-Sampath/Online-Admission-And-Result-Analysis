@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance & Result Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #29294b;
+            color: #ffa500;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffa500;
+        }
+
+        .student-card {
+            display: flex;
+            flex-direction: column;
+            background: rgb(12, 106, 143);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            overflow: hidden;
+            color: #ffa500;
+        }
+
+        .student-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .student-info h2 {
+            margin: 10px 0;
+            font-size: 22px;
+            color: #ffa500;
+        }
+
+        .student-info p {
+            margin: 5px 0;
+        }
+
+        .student-photo {
+            width: 120px;
+            height: 140px;
+            margin: 0 auto;
+            border-radius: 5%;
+            background-size: cover;
+            background-position: center;
+            border: 3px solid #ffa500;
+        }
+
+        .bar-container {
+            margin: 10px 0;
+            background: #ffa500;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 20px;
+            text-align: right;
+            padding-right: 5px;
+            line-height: 20px;
+            color: #29294b;
+            border-radius: 20px;
+        }
+
+        .attendance-bar {
+            background-color: #3d3d5c;
+            color: #ffa500;
+        }
+
+        .responsive-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            /* color: #29294b; */
+            background: #3d3d5c;
+
+        }
+
+        .responsive-table th, .responsive-table td {
+            border: 1px solid #29294b;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .responsive-table th {
+            background-color: #29294b;
+            color: #ffa500;
+        }
+
+        .chart-container {
+            margin-top: 30px;
+            background: rgb(12, 106, 143);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .student-info {
+                text-align: center;
+            }
+
+            .student-photo {
+                width: 100px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance & Result Analysis</h1>
+        <div id="students"></div>
+
+        <div class="chart-container">
+            <canvas id="resultChart"></canvas>
+        </div>
+    </div>
+
+    <!-- <script src="../JavaScript/Result.js"></script> -->
+    <script src="../JavaScript/Analysis.js"></script>
+
+</body>
+</html>
