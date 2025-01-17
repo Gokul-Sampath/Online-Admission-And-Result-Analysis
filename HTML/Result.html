@@ -32,47 +32,46 @@
 
 <section class="section">
     <!-- Login Form -->
-<div id="login-container" class="login">
-    <h1>Student Login</h1>
-    <input type="text" id="regNo" placeholder="Enter Registration Number" value="1u22cs039">
-    <input type="password" id="password" placeholder="Enter Password" value="1u22cs039">
-    <p>Hint : Register Number</p><br>
-    <button onclick="login()">Login</button>
-</div>
+    <div id="login-container" class="login">
+        <h1>Student Login</h1>
+        <input type="text" id="regNo" placeholder="Enter Registration Number" value="1u22cs039">
+        <input type="password" id="password" placeholder="Enter Password" value="1u22cs039">
+        <p>Hint : Register Number</p><br>
+        <button onclick="login()">Login</button>
+    </div>
 
-<!-- Dashboard -->
-<div class="dashboard-container" id="dashboard-container">
-    <h1 class="sd">Student Dashboard</h1>
-    <img id="studentPhoto" alt="Profile Image" src="https://via.placeholder.com/150" alt="Student Photo" class="student-photo"><br>
-    <a href="../HTML/Analysis.html"><button class="analysis-btn">View Analysis</button></a>
-    
-    <!-- Student Info with Photo -->
-    <div class="dashboard" id="dashboard">
-        <div class="card" id="studentInfoCard">
-            <h3>Student Info</h3>
-            <table class="data-table">
-                <tr><th>Name</th><td id="studentName"></td></tr>
-                <tr><th>Reg No</th><td id="studentRegNo"></td></tr>
-                <tr><th>Attendance</th><td id="attendance"></td></tr>
-                <tr><th>Current GPA</th><td id="cgpamark"></td></tr>
-            </table>
-        </div>
+    <!-- Dashboard -->
+    <div class="dashboard-container" id="dashboard-container" style="display: none;">
+        <h1 class="sd">Student Dashboard</h1>
+        <img id="studentPhoto" alt="Profile Image" src="https://via.placeholder.com/150" class="student-photo"><br>
+        <a href="../HTML/Analysis.html"><button class="analysis-btn">View Analysis</button></a>
+        
+        <!-- Student Info with Photo -->
+        <div class="dashboard" id="dashboard">
+            <div class="card" id="studentInfoCard">
+                <h3>Student Info</h3>
+                <table class="data-table">
+                    <tr><th>Name</th><td id="studentName"></td></tr>
+                    <tr><th>Reg No</th><td id="studentRegNo"></td></tr>
+                    <tr><th>Attendance</th><td id="attendance"></td></tr>
+                    <tr><th>Current GPA</th><td id="cgpamark"></td></tr>
+                </table>
+            </div>
 
-        <!-- Marks Cards -->
-        <div class="card">
-            <h3>Examinations Result November - 2024</h3>
-            <table class="data-table">
-                <tr><th>ADVANCED JAVA PROGRAMMING</th><td id="mark1"></td></tr>
-                <tr><th>BUSINESS INTELLIGENCE USING PENTAHO</th><td id="mark2"></td></tr>
-                <tr><th>ELECTIVE - III SOFTWARE TESTING</th><td id="mark3"></td></tr>
-                <tr><th>ELECTIVE - IV  BIG DATA ENGINEERING</th><td id="mark4"></td></tr>
-                <!-- <tr><th>5th Semester GPA</th><td id="mark5"></td></tr> -->
-                <!-- <tr><th>6th Semester GPA</th><td id="mark6"></td></tr> -->
-            </table>
+            <!-- Marks Cards -->
+            <div class="card">
+                <h3>Examinations Result November - 2024</h3>
+                <table class="data-table">
+                    <tr><th>ADVANCED JAVA PROGRAMMING</th><td id="mark1"></td></tr>
+                    <tr><th>BUSINESS INTELLIGENCE USING PENTAHO</th><td id="mark2"></td></tr>
+                    <tr><th>ELECTIVE - III SOFTWARE TESTING</th><td id="mark3"></td></tr>
+                    <tr><th>ELECTIVE - IV BIG DATA ENGINEERING</th><td id="mark4"></td></tr>
+                </table>
+            </div>
         </div>
     </div>
-</div>
 </section>
+
 <script src="../JavaScript/Result.js"></script>
 
 </body>
