@@ -2,13 +2,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #29294b;
+    background-color: rgb(172, 221, 222);
     /* background-image: url("../image/College_CS_Department.png"); */
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
     color: #ffa500;
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 /* Header Section */
 header {
     background-color: rgb(12, 106, 143);
@@ -81,6 +83,10 @@ header {
 
 /* Dropdown for Mobile */
 @media (max-width: 820px) {
+    .college-name{
+        display: none;
+    }
+    
     .hamburger {
         display: flex;
     }
@@ -120,6 +126,8 @@ header {
     }
 }
 
+
+
 .container {
     width: 90%;
     margin: 0 auto;
@@ -131,6 +139,9 @@ header {
 h1 {
     text-align: center;
     color: #ffa500;
+}
+.ra{
+    color: white;
 }
 
 .student-card {
@@ -171,7 +182,7 @@ h1 {
 
 .bar-container {
     margin: 10px 0;
-    background: #ffa500;
+    background: rgb(172, 221, 222);
     border-radius: 20px;
     overflow: hidden;
 }
@@ -181,13 +192,12 @@ h1 {
     text-align: right;
     padding-right: 5px;
     line-height: 20px;
-    color: #29294b;
     border-radius: 20px;
 }
 
-.attendance-bar {
-    background-color: #3d3d5c;
-    color: #ffa500;
+.percentage-bar {
+    background-color: orange;
+    color: whitesmoke;
 }
 
 .responsive-table {
@@ -195,17 +205,17 @@ h1 {
     border-collapse: collapse;
     margin-top: 15px;
     color: white;
-    background: #3d3d5c;
+    background: rgb(12, 106, 143);
 }
 
 .responsive-table th, .responsive-table td {
-    border: 1px solid #29294b;
+    border: 1px solid whitesmoke;
     padding: 10px;
     text-align: center;
 }
 
 .responsive-table th {
-    background-color: #29294b;
+    background-color: rgb(12, 106, 143);
     color: #ffa500;
 }
 

@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 html {
     scroll-behavior: smooth;
   }
@@ -259,7 +261,9 @@ header {
         margin-top: 0;
     }
 }
-        
+
+
+
 /* Main Content Section */
 main {
     padding: 20px;
@@ -382,6 +386,10 @@ footer {
         
 /* Responsive Design */
 @media (max-width: 768px) {
+    .college-name{
+        display: none;
+    }
+    
     .tab-btn {
         width: 48%;
     }

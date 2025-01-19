@@ -1,22 +1,32 @@
 body, h1, h2, p, table, input, button {
     margin: 0;
     padding: 0;
+    
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url("../image/College_CS_Department.png");
-    background-size: cover;
+    /* background-image: url("../image/College_CS_Department.png"); */
+    /* background-size: cover; */
+    background-color: rgb(172, 221, 222);
     color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
+}
+.sd{
+    color: white;
 }
 
 /* Header Section */
@@ -91,6 +101,10 @@ header {
 
 /* Dropdown for Mobile */
 @media (max-width: 820px) {
+    .college-name{
+        display: none;
+    }
+    
     .hamburger {
         display: flex;
     }
@@ -129,6 +143,8 @@ header {
         margin-top: 0;
     }
 }
+
+
 
 h1 {
     font-size: 36px;
@@ -174,6 +190,7 @@ h1 {
 #dashboard-container {
     display: none;
     width: 100%;
+    margin-top: 255vh;
     max-width: 1200px;
     text-align: center;
 }
@@ -199,11 +216,25 @@ h1 {
     object-fit: cover;
 }
 
-.analysis-btn{
-    background-color: #29294b;
-    padding: 10px;
+.analysis-btn-back{
+    background-color: rgb(12, 106, 143);
+    margin-bottom: 2vh;
+    width: 10vh;
+    padding: 0px 5px 0px 5px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.analysis-btn-view{
+    background-color: orange;
+    margin-bottom: 2vh;
+    width: 15vh;
+    padding: 0px 5px 0px 5px;
+    border-radius: 10px;
+}
+.analysis-btn-back:hover{
+    background-color: orange;
+}
+.analysis-btn-view:hover{
+    background-color: rgb(12, 106, 143);
 }
 
 .dashboard {
@@ -214,7 +245,7 @@ h1 {
 }
 
 .card {
-    background-color: #29294b;
+    background-color: rgb(12, 106, 143);
     padding: 20px;
     padding-bottom: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -238,13 +269,13 @@ h1 {
 }
 
 .data-table th, .data-table td {
-    border: 1px solid #444;
+    border: 1px solid whitesmoke;
     padding: 8px;
     text-align: center;
 }
 
 .data-table th {
-    background-color: #3d3d5c;
+    /* background-color: #3d3d5c; */
     color: #ffa500;
 }
 
@@ -268,7 +299,9 @@ color: white;
 
 /* Media Query for Smaller Screens */
 @media (max-width: 820px) {
-    
+    #dashboard-container{
+        margin-top: 250vh;
+    }
     .login {
         max-width: 100%;
     }
@@ -287,7 +320,6 @@ color: white;
 }
 
 @media (max-width: 480px) {
-    
     h1 {
         font-size: 24px;
     }

@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 html {
     scroll-behavior: smooth;
   }
@@ -125,6 +128,8 @@ header {
     border-radius: 5px;
 }
 
+
+
 /* Main Content Styling */
 .main-content {
     padding: 40px;
@@ -139,14 +144,6 @@ header {
     color: #001f3d;
     margin-bottom: 40px;
     text-align: center;
-}
-
-.main-content {
-    padding: 40px;
-    background-color: #fff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin: 20px;
 }
 
 .main-content h2 {
@@ -188,6 +185,9 @@ footer {
 @media (max-width: 768px) {
     body{
         width: 100%;
+    }
+    .college-name{
+        display: none;
     }
     
     .nav-links {

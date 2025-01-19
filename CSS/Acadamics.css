@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 html {
     scroll-behavior: smooth;
   }
@@ -145,6 +148,13 @@ header {
     border-radius: 5px;
 }
 
+marquee{
+    color: white;
+    width: 94%;
+    margin-left: 3%;
+    font-size: 20px;
+}
+
 /* Main Content Styling */
 .main-content {
     padding: 40px;
@@ -204,8 +214,8 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    body{
-        width: 100vh;
+    .college-name{
+        display: none;
     }
     .nav-links {
         display: none;

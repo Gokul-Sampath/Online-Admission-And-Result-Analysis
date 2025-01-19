@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard</title>
-    <link rel="icon" type="image/x-icon" href="../image/logo.png">
+    <link rel="icon" type="image/x-icon" href="../image/icon.png">
     <link rel="stylesheet" href="../CSS/Result.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
 <header>
     <nav class="navbar">
         <div class="logo">
-            <img src="../image/logo.png" alt="Logo" class="logo-img"> <!-- Add logo here -->
-            <h2>GSTech</h2>
+            <img src="../image/logo.jpg" alt="Logo" class="logo-img">
+            <h2 class="college-name">Institute of Technology</h2>
         </div>
         <ul class="nav-links" id="nav-links">
             <li><a href="../HTML/Home.html">Home</a></li>
@@ -44,32 +44,100 @@
     <!-- Dashboard -->
     <div class="dashboard-container" id="dashboard-container" style="display: none;">
         <h1 class="sd">Student Dashboard</h1>
-        <img id="studentPhoto" alt="Profile Image" src="https://via.placeholder.com/150" class="student-photo"><br>
-        <a href="../HTML/Analysis.html"><button class="analysis-btn">View Analysis</button></a>
-        
+        <img id="studentPhoto" alt="Profile Image" src="https://via.placeholder.com/150" class="student-photo" ><br>
+        <div class="card" id="studentInfoCard">
+            <h2>Student Info</h2>
+            <table class="data-table">
+                <tr><th>Name</th><td id="studentName"></td></tr>
+                <tr><th>Reg No</th><td id="studentRegNo"></td></tr>
+                <tr><th>Programme</th><td>BSc Computer Science</td></tr>
+                <tr hidden><th>Percentage</th><td id="percentage"></td></tr>
+                <tr><th>Current CGPA</th><td id="cgpamark"></td></tr>
+            </table>
+        </div>
+
         <!-- Student Info with Photo -->
         <div class="dashboard" id="dashboard">
-            <div class="card" id="studentInfoCard">
-                <h3>Student Info</h3>
-                <table class="data-table">
-                    <tr><th>Name</th><td id="studentName"></td></tr>
-                    <tr><th>Reg No</th><td id="studentRegNo"></td></tr>
-                    <tr><th>Attendance</th><td id="attendance"></td></tr>
-                    <tr><th>Current GPA</th><td id="cgpamark"></td></tr>
-                </table>
-            </div>
-
             <!-- Marks Cards -->
             <div class="card">
-                <h3>Examinations Result November - 2024</h3>
+                <h2>Semester - I Examinations Result November - 2024</h2>
                 <table class="data-table">
-                    <tr><th>ADVANCED JAVA PROGRAMMING</th><td id="mark1"></td></tr>
-                    <tr><th>BUSINESS INTELLIGENCE USING PENTAHO</th><td id="mark2"></td></tr>
-                    <tr><th>ELECTIVE - III SOFTWARE TESTING</th><td id="mark3"></td></tr>
-                    <tr><th>ELECTIVE - IV BIG DATA ENGINEERING</th><td id="mark4"></td></tr>
+                    <tr><th>Course Code</th><th>Course Name</th><th>Score</th></tr>
+                    <tr><td>11F</td><td>FRENCH - I</td><td id="11F"></td></tr>
+                    <tr><td>12E</td><td>ENGLISH - I</td><td id="12E"></td></tr>
+                    <tr><td>13A</td><td>BASIC JAVA PROGRAMMING</td><td id="13A"></td></tr>
+                    <tr><td>13B</td><td>MATHEMATICS FOR COMPUTER SCIENCE - I</td><td id="13B"></td></tr>
                 </table>
-            </div>
+            </div>  
         </div>
+        <div class="dashboard" id="dashboard">
+            <!-- Marks Cards -->
+            <div class="card">
+                <h2>Semester - II Examinations Result May - 2023</h2>
+                <table class="data-table">
+                    <tr><th>Course Code</th><th>Course Name</th><th>Score</th></tr>
+                    <tr><td>21F</td><td>FRENCH - II</td><td id="21F"></td></tr>
+                    <tr><td>22E</td><td>ENGLISH - II</td><td id="22E"></td></tr>
+                    <tr><td>23A</td><td>INTERMEDIATE JAVA PROGRAMMING</td><td id="23A"></td></tr>
+                    <tr><td>23B</td><td>MATHEMATICS FOR COMPUTER SCIENCE - II</td><td id="23B"></td></tr>
+                    <tr><td>24E</td><td>ENVIRONMENTAL STUDIES</td><td id="24E"></td></tr>
+                    <tr><td>25P</td><td>2D DESIGN CONCEPTS PART - I</td><td id="25P"></td></tr>
+                    <tr><td>25Q</td><td>2D DESIGN CONCEPTS PART - II</td><td id="25Q"></td></tr>
+                </table>
+            </div>  
+        </div>
+        <div class="dashboard" id="dashboard">
+            <!-- Marks Cards -->
+            <div class="card">
+                <h2>Semester - III Examinations Result April - 2024</h2>
+                <table class="data-table">
+                    <tr><th>Course Code</th><th>Course Name</th><th>Score</th></tr>
+                    <tr><td>31F</td><td>FRENCH - III</td><td id="31F"></td></tr>
+                    <tr><td>32E</td><td>ENGLISH - III</td><td id="32E"></td></tr>
+                    <tr><td>33A</td><td>R PROGRAMMING</td><td id="33A"></td></tr>
+                    <tr><td>33B</td><td>RELATIONAL DATABASE MANAGEMENT SYSTEM</td><td id="33B"></td></tr>
+                    <tr><td>33C</td><td>ELECTIVE - I OPERATING SYSTEMS AND COMPUTER NETWORKS</td><td id="33C"></td></tr>
+                    <tr><td>34D</td><td>PROFESSIONAL ENGLISH - I</td><td id="34D"></td></tr>
+                </table>
+            </div>  
+        </div>
+        <div class="dashboard" id="dashboard">
+            <!-- Marks Cards -->
+            <div class="card">
+                <h2>Semester - IV Examinations Result November - 2024</h2>
+                <table class="data-table">
+                    <tr><th>Course Code</th><th>Course Name</th><th>Score</th></tr>
+                    <tr><td>41F</td><td>FRENCH - IV</td><td id="41F"></td></tr>
+                    <tr><td>42E</td><td>ENGLISH - IV</td><td id="42E"></td></tr>
+                    <tr><td>43A</td><td>DATA STRUCTURES & ALGORITHMS USING JAVA</td><td id="43A"></td></tr>
+                    <tr><td>43B</td><td>BUSINESS ANALYTICS</td><td id="43B"></td></tr>
+                    <tr><td>43E</td><td>ELECTIVE - II AGILE SOFTWARE ENGINEERING</td><td id="43E"></td></tr>
+                    <tr><td>44D</td><td>PROFESSIONAL ENGLISH - II</td><td id="44D"></td></tr>
+                    <tr><td>44F</td><td>APTITUDE</td><td id="44F"></td></tr>
+                    <tr><td>45P</td><td>3D FUNDAMENTALS PART - I</td><td id="45P"></td></tr>
+                    <tr><td>45Q</td><td>3D FUNDAMENTALS PART - II</td><td id="45Q"></td></tr>
+                </table>
+            </div>  
+        </div>
+        <div class="dashboard" id="dashboard">
+            <!-- Marks Cards -->
+            <div class="card">
+                <h2>Semester - V Examinations Result November - 2024</h2>
+                <table class="data-table">
+                    <tr><th>Course Code</th><th>Course Name</th><th>Score</th></tr>
+                    <tr><td>53A</td><td>ADVANCED JAVA PROGRAMMING</td><td id="53A"></td></tr>
+                    <tr><td>53B</td><td>BUSINESS INTELLIGENCE USING PENTAHO</td><td id="53B"></td></tr>
+                    <tr><td>53E</td><td>ELECTIVE - III SOFTWARE TESTING</td><td id="53E"></td></tr>
+                    <tr><td>54A</td><td>PLACEMENT - COLLEGE TO CORPORATE I</td><td id="54A"></td></tr>
+                    <tr><td>54B</td><td>PLACEMENT - COLLEGE TO CORPORATE II</td><td id="54B"></td></tr>
+                    <tr><td>54G</td><td>NCC/NSS /SPORTS /CULTURALS</td><td id="54G"></td></tr>
+                    <tr><td>5EK</td><td>ELECTIVE - IV BIG DATA ENGINEERING</td><td id="5EK"></td></tr>
+                </table>
+            </div>  
+        </div>
+        <a href="../HTML/Result.html"><button class="analysis-btn-back"><h4>Back</h4></button></a>
+        <a href="../HTML/Analysis.html"><button class="analysis-btn-view"><h4>View Analysis</h4></button></a>
+
     </div>
 </section>
 

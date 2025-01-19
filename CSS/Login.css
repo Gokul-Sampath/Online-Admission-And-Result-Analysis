@@ -4,7 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -88,6 +90,8 @@ margin-left: 20px;
     height: 3px;
     background-color: #fff;
 }
+
+
 
 /* Center the login form */
 .container {
@@ -189,6 +193,10 @@ footer {
 
 /* Dropdown for Mobile */
 @media (max-width: 768px) {
+    .college-name{
+        display: none;
+    }
+    
     .hamburger {
         display: flex;
     }

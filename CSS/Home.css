@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+::-webkit-scrollbar {
+    display: none;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -12,11 +14,19 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: rgb(12, 106, 143);
-    overflow-x: hidden;    
+    overflow-x: hidden;  
+    width: 100%;
 }
 
 a{
     text-decoration: none
+}
+
+marquee{
+    color: white;
+    width: 94%;
+    margin-left: 3%;
+    font-size: 20px;
 }
 
 /* Header Section */
@@ -45,7 +55,7 @@ header {
 }
 
 .navbar .logo-img {
-    width: 40px;
+    width: 60px;
     height: auto;
     margin-right: 10px;
 }
@@ -101,6 +111,7 @@ header {
     .nav-links {
         display: none;
         position: absolute;
+        margin-top: 25px;
         top: 60px;
         left: 0;
         background-color: rgb(12, 106, 143);
@@ -139,7 +150,7 @@ header {
     overflow: hidden;
     text-align: center;
     background-color: rgb(12, 106, 143);
-    margin-top: 60px;
+    margin-top: 105px;
 }
 
 .hero-content {
@@ -241,6 +252,12 @@ header {
     font-size: 16px;
 }
 
+.reason{
+    font-size: 1rem;
+}
+.value{
+    font-size: 50px;
+}
 /* Footer Section */
 
 footer {
@@ -253,8 +270,8 @@ footer {
 
 /* Responsive Media Queries */
 
-/* Tablet Layout */
 @media (max-width: 1024px) {
+
     .hero{
         max-height: 42vh;
     }
@@ -283,10 +300,6 @@ footer {
 
 /* Mobile Layout */
 @media (max-width: 768px) {
-    .hero{
-        max-height: 35vh;
-        width: 100vh;
-    }
     .nav-links {
         display: none;
         flex-direction: column;
@@ -312,15 +325,16 @@ footer {
     }
 
     .carousel img {
-        height: 250px;
+        height: 120px;
+        
     }
     .courses {
         flex-direction: column;
         align-items: center;
-        width: 100vh;
-        height: 100vh;
     }
-
+    .hero{
+    margin-left: 30px;
+    }
     .hero h1 {
         font-size: 30px;
     }
@@ -328,6 +342,10 @@ footer {
     .hero p {
         font-size: 16px;
     }
+    .arrow {
+        font-size: 10px;
+    }
+
     footer{
         font-size: 14px;
         padding: 15px;
