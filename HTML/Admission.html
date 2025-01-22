@@ -10,13 +10,26 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="../HTML/Home.html"><img src="../image/logo.jpg" alt="College Logo" class="logo-img"></a>
-                <h2 class="college-name">Institute of Technology</h2>
-            </div>
-    </header>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../image/logo.jpg" alt="Logo" class="logo-img">
+            <h2 class="college-name">Institute of Technology</h2>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="../HTML/Home.html">Home</a></li>
+            <li><a href="../HTML/About.html">About</a></li>
+            <li><a href="../HTML/Acadamics.html">Acadamics</a></li>
+            <li><a href="../HTML/Admission.html" class="active">Admission</a></li>
+            <li><a href="../HTML/Result.html">Result</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
 
     <!-- Main Content Section -->
     <main>
@@ -33,7 +46,7 @@
                 <!-- Select Eligibility Tab -->
                 <div id="eligibility" class="tab active-tab">
                     <!-- Removed marquee for modern design -->
-                    <h1>Self-Declaration Form</h1>
+                    <h1>Admission-Form 2025</h1>
                     <h3>Eligibility Criteria</h3>
                     <form id="eligibility-form">
                         <div class="form-group">
@@ -79,6 +92,77 @@
                 <div id="personal" class="tab">
                     <h3>Course and Personal Info</h3>
                     <form id="personal-form">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="First-Name" value="Gokul" required>
+
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="Last-Name" value="Sampath" required>
+
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" name="Date of Birth" value="2002-01-17" required >
+
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="Gender" required>
+                            <option value="Male">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+
+                        <label for="location">Location:</label>
+                        <select id="location" name="Current Location" required>
+                            <option value="COIMBATORE">Select District</option>
+                            <option value="ARIYALUR">ARIYALUR</option>
+                            <option value="CHENGALPATTU">CHENGALPATTU</option>
+                            <option value="CHENNAI">CHENNAI</option>
+                            <option value="COIMBATORE">COIMBATORE</option>
+                            <option value="CUDDALORE">CUDDALORE</option>
+                            <option value="DHARMAPURI">DHARMAPURI</option>
+                            <option value="DINDIGUL">DINDIGUL</option>
+                            <option value="ERODE">ERODE</option>
+                            <option value="KALLAKURICHI">KALLAKURICHI</option>
+                            <option value="KANCHIPURAM">KANCHIPURAM</option>
+                            <option value="KARUR">KARUR</option>
+                            <option value="KRISHNAGIRI">KRISHNAGIRI</option>
+                            <option value="MADURAI">MADURAI</option>
+                            <option value="MAYILADUTHURAI">MAYILADUTHURAI</option>
+                            <option value="NAGAPATTINAM">NAGAPATTINAM</option>
+                            <option value="KANYAKUMARI">KANYAKUMARI</option>
+                            <option value="NAMAKKAL">NAMAKKAL</option>
+                            <option value="PERAMBALUR">PERAMBALUR</option>
+                            <option value="PUDUKKOTTAI">PUDUKKOTTAI</option>
+                            <option value="RAMANATHAPURAM">RAMANATHAPURAM</option>
+                            <option value="RANIPET">RANIPET</option>
+                            <option value="SALEM">SALEM</option>
+                            <option value="SIVAGANGAI">SIVAGANGAI</option>
+                            <option value="TENKASI">TENKASI</option>
+                            <option value="THANJAVUR">THANJAVUR</option>
+                            <option value="THENI">THENI</option>
+                            <option value="THIRUVALLUR">THIRUVALLUR</option>
+                            <option value="THIRUVARUR">THIRUVARUR</option>
+                            <option value="TUTICORIN">THIRUVARUR</option>
+                            <option value="TRICHIRAPPALLI">TRICHIRAPPALLI</option>
+                            <option value="THIRUNELVELI">THIRUNELVELI</option>
+                            <option value="TIRUPATTUR">TIRUPATTUR</option>
+                            <option value="TIRUPPUR">TIRUPPUR</option>
+                            <option value="THIRUVANNAMALAI">THIRUVANNAMALAI</option>
+                            <option value="NILGIRIS">NILGIRIS</option>
+                            <option value="VELLORE">VELLORE</option>
+                            <option value="VILUPPURAM">VILUPPURAM</option>
+                            <option value="VIRUDHUNAGAR">VIRUDHUNAGAR</option>
+                        </select>
+
+                        <label for="mobile">Mobile Number:</label>
+                        <input type="number" id="mobile" name="Mobile Number" value="6379573845" required>
+
+                        <label for="school">School Name:</label>
+                        <input type="text" id="school" name="School Name" value="Rajendran Matric Higher Secondary School" required>
+
+                        <label for="year">Year of Passed Out:</label>
+                        <input type="text" id="year" name="Year of Passing" value="2020" required>
+
+                        <label for="Gmail Id">Gmail:</label>
+                        <input type="email" id="last-name" name="Gmail" value="gokulsampath357@gmail.com" required>
                         <label for="course">Course:</label>
                         <select id="course" name="course" required>
                             <option value="BSc Computer Science">Select a Course</option>
@@ -132,74 +216,9 @@
                             <option value="B.Sc. (CS and HM)">B.Sc. (CS and HM)</option>
                         </select>
 
-                        <label for="first-name">First Name:</label>
-                        <input type="text" id="first-name" name="First-Name" value="Gokul" required>
+                        <label for="date">Appointment Date:</label>
+                        <input type="date" id="appointment" name="Appointment Date" value="2025-01-24" required >
 
-                        <label for="last-name">Last Name:</label>
-                        <input type="text" id="last-name" name="Last-Name" value="Sampath" required>
-
-                        <label for="dob">Date of Birth:</label>
-                        <input type="date" id="dob" name="Date of Birth" value="2002-01-17" required >
-
-                        <label for="gender">Gender:</label>
-                        <select id="gender" name="Gender" required>
-                            <option value="Male">Select Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other</option>
-                        </select>
-
-                        <label for="location">Location:</label>
-                        <select id="location" name="Current Location" required>
-                            <option value="Karur">Select District</option>
-                            <option value="ARIYALUR">ARIYALUR</option>
-                            <option value="CHENGALPATTU">CHENGALPATTU</option>
-                            <option value="CHENNAI">CHENNAI</option>
-                            <option value="COIMBATORE">COIMBATORE</option>
-                            <option value="CUDDALORE">CUDDALORE</option>
-                            <option value="DHARMAPURI">DHARMAPURI</option>
-                            <option value="DINDIGUL">DINDIGUL</option>
-                            <option value="ERODE">ERODE</option>
-                            <option value="KALLAKURICHI">KALLAKURICHI</option>
-                            <option value="KANCHIPURAM">KANCHIPURAM</option>
-                            <option value="KARUR">KARUR</option>
-                            <option value="KRISHNAGIRI">KRISHNAGIRI</option>
-                            <option value="MADURAI">MADURAI</option>
-                            <option value="MAYILADUTHURAI">MAYILADUTHURAI</option>
-                            <option value="NAGAPATTINAM">NAGAPATTINAM</option>
-                            <option value="KANYAKUMARI">KANYAKUMARI</option>
-                            <option value="NAMAKKAL">NAMAKKAL</option>
-                            <option value="PERAMBALUR">PERAMBALUR</option>
-                            <option value="PUDUKKOTTAI">PUDUKKOTTAI</option>
-                            <option value="RAMANATHAPURAM">RAMANATHAPURAM</option>
-                            <option value="RANIPET">RANIPET</option>
-                            <option value="SALEM">SALEM</option>
-                            <option value="SIVAGANGAI">SIVAGANGAI</option>
-                            <option value="TENKASI">TENKASI</option>
-                            <option value="THANJAVUR">THANJAVUR</option>
-                            <option value="THENI">THENI</option>
-                            <option value="THIRUVALLUR">THIRUVALLUR</option>
-                            <option value="THIRUVARUR">THIRUVARUR</option>
-                            <option value="TUTICORIN">THIRUVARUR</option>
-                            <option value="TRICHIRAPPALLI">TRICHIRAPPALLI</option>
-                            <option value="THIRUNELVELI">THIRUNELVELI</option>
-                            <option value="TIRUPATTUR">TIRUPATTUR</option>
-                            <option value="TIRUPPUR">TIRUPPUR</option>
-                            <option value="THIRUVANNAMALAI">THIRUVANNAMALAI</option>
-                            <option value="NILGIRIS">NILGIRIS</option>
-                            <option value="VELLORE">VELLORE</option>
-                            <option value="VILUPPURAM">VILUPPURAM</option>
-                            <option value="VIRUDHUNAGAR">VIRUDHUNAGAR</option>
-                        </select>
-
-                        <label for="mobile">Mobile Number:</label>
-                        <input type="number" id="mobile" name="Mobile Number" value="6379573845" required>
-
-                        <label for="school">School Name:</label>
-                        <input type="text" id="school" name="School Name" value="Rajendran Matric Higher Secondary School" required>
-
-                        <label for="year">Year of Passed Out:</label>
-                        <input type="text" id="year" name="Year of Passing" value="2020" required>
                     </form>
                     <button class="next-btn" id="back-personal">Back</button>
                     <button class="next-btn" id="next-personal">Next</button>
@@ -207,16 +226,18 @@
 
                 <!-- Review Tab -->
                 <div id="review" class="tab">
+                    <h2 class="form-college-name"><img src="../image/icon.png" class="form-logo" alt="">Institute of Technology</h2>
+                    <h1 class="form-college-name">Admission-Form 2025</h1>
                     <h3>Review Your Information</h3>
                     <p>Review the information you provided in the previous tabs. Confirm your details and submit your form.</p>
                     <button class="next-btn" id="back-review">Back</button>
-                    <button class="next-btn" id="download-form">Download details</button>
-                    <button class="next-btn" id="submit-form">Submit</button>
+                    <button class="next-btn" id="download-form"  id="submit-form">Download & submit-form</button>
                 </div>
             </div>
         </div>
     </main>
+<script src="../JavaScript/Admission.js"  type="module">
 
-    <script src="../JavaScript/Admission.js"></script>
+</script>
 </body>
 </html>

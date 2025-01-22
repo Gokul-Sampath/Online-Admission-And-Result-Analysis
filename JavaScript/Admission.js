@@ -1,173 +1,152 @@
+// Menu toggle bar
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
 
-// Tabs and Form Sections
-const eligibilityTab = document.getElementById('eligibility-tab');
-const personalTab = document.getElementById('personal-tab');
-const reviewTab = document.getElementById('review-tab');
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
 
-const eligibilityContent = document.getElementById('eligibility');
-const personalContent = document.getElementById('personal');
-const reviewContent = document.getElementById('review');
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js";
 
-const nextEligibilityBtn = document.getElementById('next-eligibility');
-const backPersonalBtn = document.getElementById('back-personal');
-const nextPersonalBtn = document.getElementById('next-personal');
-const backReviewBtn = document.getElementById('back-review');
-const submitFormBtn = document.getElementById('submit-form');
-const downloadFormBtn = document.getElementById('download-form');
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyC-7Cjq5NGHIZkC_aNTOxjTVLtIQb-NXVI",
+            authDomain: "oaara-fy-project-2025.firebaseapp.com",
+            databaseURL: "https://oaara-fy-project-2025-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "oaara-fy-project-2025",
+            storageBucket: "oaara-fy-project-2025.appspot.com",
+            messagingSenderId: "991601225781",
+            appId: "1:991601225781:web:08d6c8b07ae6e1a86e417c",
+            measurementId: "G-CQL83CNEJ2"
+        };
 
-const eligibilityForm = document.getElementById('eligibility-form');
-const personalForm = document.getElementById('personal-form');
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
 
-// Helper Functions
-function showTab(tabElement, contentElement) {
-    const tabs = document.getElementsByClassName('tab-btn');
-    const contents = document.getElementsByClassName('tab');
+        // Form Tabs
+        const eligibilityTab = document.getElementById('eligibility-tab');
+        const personalTab = document.getElementById('personal-tab');
+        const reviewTab = document.getElementById('review-tab');
 
-    // Remove active class from all tabs and contents
-    for (let i = 0; i < tabs.length; i++) {
-        tabs[i].classList.remove('active');
-    }
+        const eligibilityContent = document.getElementById('eligibility');
+        const personalContent = document.getElementById('personal');
+        const reviewContent = document.getElementById('review');
 
-    for (let i = 0; i < contents.length; i++) {
-        contents[i].classList.remove('active-tab');
-    }
+        const nextEligibilityBtn = document.getElementById('next-eligibility');
+        const backPersonalBtn = document.getElementById('back-personal');
+        const nextPersonalBtn = document.getElementById('next-personal');
+        const backReviewBtn = document.getElementById('back-review');
+        const submitFormBtn = document.getElementById('submit-form');
+        const downloadFormBtn = document.getElementById('download-form');
 
-    // Add active class to the selected tab and content
-    tabElement.classList.add('active');
-    contentElement.classList.add('active-tab');
-}
+        const eligibilityForm = document.getElementById('eligibility-form');
+        const personalForm = document.getElementById('personal-form');
 
-function validateEligibilityForm() {
-    const passed12th = eligibilityForm.querySelector('input[name="passed12th"]:checked');
-    const aggregateMarks = eligibilityForm.querySelector('input[name="aggregateMarks"]:checked');
-    const ageCriteria = eligibilityForm.querySelector('input[name="ageCriteria"]:checked');
+        // Helper Functions
+        function showTab(tabElement, contentElement) {
+            const tabs = document.getElementsByClassName('tab-btn');
+            const contents = document.getElementsByClassName('tab');
 
-    if (!passed12th || !aggregateMarks || !ageCriteria) {
-        alert('Please answer all eligibility questions.');
-        return false;
-    }
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
 
-    if (passed12th.value === 'no' || aggregateMarks.value === 'no' || ageCriteria.value === 'no') {
-        alert('You do not meet the eligibility criteria.');
-        return false;
-    }
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].classList.remove('active-tab');
+            }
 
-    return true;
-}
-
-function validatePersonalForm() {
-    const requiredFields = personalForm.querySelectorAll('[required]');
-
-    for (let i = 0; i < requiredFields.length; i++) {
-        const field = requiredFields[i];
-        if (!field.value.trim()) {
-            alert(`Please fill out the ${field.previousElementSibling.textContent} field.`);
-            return false;
+            tabElement.classList.add('active');
+            contentElement.classList.add('active-tab');
         }
-    }
 
-    return true;
-}
+        function populateReviewSection() {
+            const reviewSection = reviewContent.querySelector('p');
+            const personalData = new FormData(personalForm);
 
-function populateReviewSection() {
-    const reviewSection = reviewContent.querySelector('p');
-    const personalData = new FormData(personalForm);
+            let reviewHTML = '<h4>Eligibility Criteria</h4><ul>';
+            const eligibilityInputs = eligibilityForm.querySelectorAll('input[type="radio"]:checked');
 
-    let reviewHTML = '<h4>Eligibility Criteria</h4><ul>';
-    const eligibilityInputs = eligibilityForm.querySelectorAll('input[type="radio"]:checked');
+            eligibilityInputs.forEach(input => {
+                reviewHTML += `<li>${input.name}: ${input.value}</li>`;
+            });
 
-    for (let i = 0; i < eligibilityInputs.length; i++) {
-        const input = eligibilityInputs[i];
-        reviewHTML += `<li>${input.name}: ${input.value}</li>`;
-    }
+            reviewHTML += '</ul><h4>Personal Information</h4><ul>';
 
-    reviewHTML += '</ul><h4>Personal Information</h4><ul>';
+            personalData.forEach((value, key) => {
+                reviewHTML += `<li>${key}: ${value}</li>`;
+            });
 
-    personalData.forEach((value, key) => {
-        reviewHTML += `<li>${key}: ${value}</li>`;
-    });
+            reviewHTML += '</ul>';
+            reviewSection.innerHTML = reviewHTML;
+        }
 
-    reviewHTML += '</ul>';
-    reviewSection.innerHTML = reviewHTML;
-}
+        // Event Listeners
+        nextEligibilityBtn.addEventListener('click', () => {
+    const passed12th = document.querySelector('input[name="passed12th"]:checked');
+    const aggregateMarks = document.querySelector('input[name="aggregateMarks"]:checked');
+    const ageCriteria = document.querySelector('input[name="ageCriteria"]:checked');
 
-// Event Listeners
-eligibilityTab.addEventListener('click', function () {
-    showTab(eligibilityTab, eligibilityContent);
-});
-
-personalTab.addEventListener('click', function () {
-    showTab(personalTab, personalContent);
-});
-
-reviewTab.addEventListener('click', function () {
-    showTab(reviewTab, reviewContent);
-});
-
-nextEligibilityBtn.addEventListener('click', function () {
-    if (validateEligibilityForm()) {
+    // Check if all the eligibility fields are answered
+    if (!passed12th || !aggregateMarks || !ageCriteria) {
+        alert("Fill all the fields");
+    } else if (passed12th.value === 'yes' &&
+               aggregateMarks.value === 'yes' &&
+               ageCriteria.value === 'yes') {
         showTab(personalTab, personalContent);
+    } else {
+        alert("You are not Eligible");
     }
 });
 
-backPersonalBtn.addEventListener('click', function () {
-    showTab(eligibilityTab, eligibilityContent);
-});
+        backPersonalBtn.addEventListener('click', () => {
+            showTab(eligibilityTab, eligibilityContent);
+        });
 
-nextPersonalBtn.addEventListener('click', function () {
-    if (validatePersonalForm()) {
-        populateReviewSection();
-        showTab(reviewTab, reviewContent);
-    }
-});
+        nextPersonalBtn.addEventListener('click', () => {
+            populateReviewSection();
+            showTab(reviewTab, reviewContent);
+        });
 
-backReviewBtn.addEventListener('click', function () {
-    showTab(personalTab, personalContent);
-});
+        backReviewBtn.addEventListener('click', () => {
+            showTab(personalTab, personalContent);
+        });
 
-submitFormBtn.addEventListener('click', function () {
-    if (confirm('Are you sure you want to submit the form?')) {
-        alert('Form submitted successfully!');
-        eligibilityForm.reset();
-        personalForm.reset();
-        window.location.href = './Login.html'; 
-    }
-});
+        downloadFormBtn.addEventListener('click', () => {
+            const eligibilityData = new FormData(eligibilityForm);
+            const personalData = new FormData(personalForm);
+            const dataToSave = {};
 
-downloadFormBtn.addEventListener('click', function () {
-    const elementToDownload = document.createElement('div');
+            eligibilityData.forEach((value, key) => {
+                dataToSave[key] = value;
+            });
 
-    // Populate content for download
-    let downloadHTML = '<h4>Eligibility Criteria</h4><ul>';
-    const eligibilityInputs = eligibilityForm.querySelectorAll('input[type="radio"]:checked');
+            personalData.forEach((value, key) => {
+                dataToSave[key] = value;
+            });
 
-    for (let i = 0; i < eligibilityInputs.length; i++) {
-        const input = eligibilityInputs[i];
-        downloadHTML += `<li>${input.name}: ${input.value}</li>`;
-    }
+            // Save data to Firebase
+            const dbRef = ref(database, 'form-submissions');
+            push(dbRef, dataToSave).then(() => {
+                alert('Data saved successfully to Firebase!');
+            }).catch(err => {
+                alert('Error saving data to Firebase.');
+                console.error(err);
+            });
 
-    downloadHTML += '</ul><h4>Personal Information</h4><ul>';
-    const personalData = new FormData(personalForm);
+            // Generate PDF
+            const elementToDownload = document.createElement('div');
+            elementToDownload.innerHTML = reviewContent.innerHTML;
 
-    personalData.forEach((value, key) => {
-        downloadHTML += `<li>${key}: ${value}</li>`;
-    });
-
-    downloadHTML += '</ul>';
-
-    // Add content to element
-    elementToDownload.innerHTML = downloadHTML;
-    elementToDownload.style.padding = '20px';
-    elementToDownload.style.fontFamily = 'Arial, sans-serif';
-
-    // Use html2pdf to generate and download the PDF
-    html2pdf().set({
-        margin: 1,
-        filename: 'form-details.pdf',
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
-    }).from(elementToDownload).save();
-});
+            html2pdf().set({
+                margin: 1,
+                filename: 'GSTech Admission-form.pdf',
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+            }).from(elementToDownload).save();
+        });
 
 //Disable Right click
 document.addEventListener('contextmenu', event => {
