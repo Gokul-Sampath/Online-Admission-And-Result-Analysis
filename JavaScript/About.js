@@ -1,8 +1,8 @@
 const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
+    navLinks.classList.toggle('active');
 });
 
 //Disable Right click
